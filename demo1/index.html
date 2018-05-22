@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript String Methods</h2>
+
+<p>Replace "Microsoft" with "Github" in the paragraph below and displays text in bold:</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo">Please visit Microsoft1! so, hellow Microsoft2, microsoft3! go on ...</p>
+
+<script>
+function myFunction() {
+	var pre = "<b>";
+    var post = "</b>";
+    var rule = "f: microsoft";
+    var str = document.getElementById("demo").innerHTML;
+    var re = new RegExp(rule.substring(2).trim() ,'ig')
+    var txt = str.replace(re, pre+"Github"+post);
+        
+    document.getElementById("demo").innerHTML = txt;
+}
+</script>
+
+</body>
+</html>
