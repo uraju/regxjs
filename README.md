@@ -1,0 +1,2 @@
+# regxjs
+Simple JS rules
