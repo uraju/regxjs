@@ -1,0 +1,37 @@
+
+<style>
+.break::before {
+      content: "\A";
+      white-space: pre;
+    }
+</style>
+
+<p>
+This is some text. This is some text. This is some text.
+This is some text. This is some text. This is some text.
+This is some text. <span class="break">This is some text. This is some text.
+This is some text. This is some text. This is some text.</span>
+</p>
+-------------------------
+...
+// before adding to arr.push(word)
+// check, it is not in begiinng
+//
+// arr.push(word)
+if (p.textContent.indexOf(word) == 0) {
+    arr.push('$$$'+word); // identifier to indicate
+} else {
+    arr.push(word)
+}
+...
+... after log, need fix only for v0 style
+console.log(k.split(":"));
+
+if(v[0].startsWith('$$$')) { // use identifier
+ before = <span class="bold">
+    v[0] = v[0].substring(3);
+} else {
+    before = <span class="bold break">
+}
+
+// v[1] needs to in next line, wrap it with <span class="break"
