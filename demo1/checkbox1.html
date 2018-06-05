@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+<style>
+label, input[type="radio"], input[type="checkbox"] {
+   line-height: 3ex;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    position: absolute;
+    left: -999em;
+}
+
+input[type="radio"] + label,
+input[type="checkbox"] + label {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+input[type="radio"] + label::before,
+input[type="checkbox"] + label::before {
+   content: "";
+   display: inline-block;
+   vertical-align: -25%;
+   height: 16px;
+   width: 16px;
+   background-color: #f5f5f5;
+   border: 1px solid rgb(166, 166, 166);
+   border-radius: 4px;
+   box-shadow: inset 0 2px 5px rgba(0,0,0,0.25);
+   margin-right: 0.4em;
+}
+input[type="checkbox"]:checked ~ label::before {
+background: blue;
+}
+input[type="radio"]:checked + label::before {
+   background: radial-gradient(circle at center, blue .6ex, white .7ex);
+}
+
+input[type="radio"] + label::before {
+   border-radius: 50%;
+}
+
+input[type="checkbox"]:checked + label::after {
+   content: '';
+   position: absolute;
+   width: 1.1ex;
+   height: 0.4ex;
+   background: blue;
+   top: 6px;
+   left: 3px;
+   border: 4px solid white;
+   border-top: none;
+   border-right: none;
+   -webkit-transform: rotate(-45deg);
+   -moz-transform: rotate(-45deg);
+   -o-transform: rotate(-45deg);
+   -ms-transform: rotate(-45deg);
+   transform: rotate(-45deg);
+}
+</style>
+</head>
+<body>
+
+<h1>This is a Heading</h1>
+<p>This is a paragraph.</p>
+    <div>
+    <input id="checkbox0" type="checkbox" checked />
+    <label for="checkbox0">Some awesome checkbox label 0</label>
+    </div>
+<fieldset>
+    <legend>Checkbox example</legend>
+    <div>
+    <input id="checkbox1" type="checkbox" checked />
+    <label for="checkbox1">Some awesome checkbox label1</label>
+    </div>
+        <div>
+    <input id="checkbox2" type="checkbox"  />
+    <label for="checkbox2">Some awesome checkbox label2</label>
+    </div>
+</fieldset>
+<fieldset>
+    <legend>Radio example</legend>
+    <div>
+        <input id="radio1" type="radio" name="radio"/>
+        <label for="radio1">Some awesome radio option #1</label>
+    <div>
+        <div>
+        <input id="radio2" type="radio" name="radio"/>
+        <label for="radio2">Some awesome radio option #2</label>
+    <div>
+    </div>
+        <input id="radio3" type="radio" name="radio"/>
+        <label for="radio3">Some awesome radio option #3</label>
+    </div>
+</fieldset>
+</body>
+</html>
