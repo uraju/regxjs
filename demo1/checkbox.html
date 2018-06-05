@@ -2,7 +2,7 @@
 <html>
 <style>
 /* The container */
-.container {
+.checkbox {
     display: block;
     position: relative;
     padding-left: 35px;
@@ -14,10 +14,11 @@
     -ms-user-select: none;
     user-select: none;
     color: blue; /*2196F3*/
+    width: auto;
 }
 
 /* Hide the browser's default checkbox */
-.container input {
+.checkbox input {
     position: absolute;
     opacity: 0;
     cursor: pointer;
@@ -36,12 +37,12 @@
 }
 
 /* On mouse-over, add a grey background color */
-.container:hover input ~ .checkmark {
+.checkbox:hover input ~ .checkmark {
     background-color: #aaa;
 }
 
 /* When the checkbox is checked, add a blue background */
-.container input:checked ~ .checkmark {
+.checkbox input:checked ~ .checkmark {
     background-color: blue;
 }
 
@@ -53,42 +54,42 @@
 }
 
 /* Show the checkmark when checked */
-.container input:checked ~ .checkmark:after {
+.checkbox input:checked ~ .checkmark:after {
     display: block;
 }
 
 /* Style the checkmark/indicator */
-.container .checkmark:after {
+.checkbox .checkmark:after {
     left: 8px;
-    top: 2px;
+    top: 1px;
     width: 5px;
     height: 13px;
     border: solid white;
     border-width: 0 3px 3px 0;
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
+    -webkit-transform: rotate(55deg);
+    -ms-transform: rotate(55deg);
+    transform: rotate(55deg);
 }
 </style>
 <body>
-
-<h1>Custom Checkboxes</h1>
-<label class="container">One
+<div style="width: 250px">
+<h1>CSS Checkboxes</h1>
+<label class="checkbox">One
   <input type="checkbox" checked="checked">
   <span class="checkmark"></span>
 </label>
-<label class="container">Two
+<label class="checkbox">Two
   <input type="checkbox">
   <span class="checkmark"></span>
 </label>
-<label class="container">Three
+<label class="checkbox">Three
   <input type="checkbox">
   <span class="checkmark"></span>
 </label>
-<label class="container">Four
+<label class="checkbox">Four
   <input type="checkbox">
   <span class="checkmark"></span>
 </label>
-
+</div>
 </body>
 </html>
