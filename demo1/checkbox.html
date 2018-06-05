@@ -5,16 +5,14 @@
 .checkbox {
     display: block;
     position: relative;
-    padding-left: 35px;
+    padding-left: 25px;
     margin-bottom: 10px;
     cursor: pointer;
-    font-size: 22px;
+    /*font-size: 22px;*/
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    color: blue; /*2196F3*/
-    width: auto;
 }
 
 /* Hide the browser's default checkbox */
@@ -29,16 +27,16 @@
     position: absolute;
     top: 0;
     left: 0;
-    height: 23px;
-    width: 23px;
-    background-color: #eee;
-    border-radius: 4px;
+    height: 16px;
+    width: 16px;
+    background-color: #F5F5F5;
+    border-radius: 3px;
     border: 1px #ccc solid;
 }
 
 /* On mouse-over, add a grey background color */
 .checkbox:hover input ~ .checkmark {
-    background-color: #aaa;
+    background-color: #ccc;
 }
 
 /* When the checkbox is checked, add a blue background */
@@ -60,20 +58,20 @@
 
 /* Style the checkmark/indicator */
 .checkbox .checkmark:after {
-    left: 8px;
-    top: 1px;
-    width: 5px;
-    height: 13px;
+    left: 4px;
+    top: 0px;
+    width: 4px;
+    height: 8px;
     border: solid white;
-    border-width: 0 3px 3px 0;
-    -webkit-transform: rotate(55deg);
-    -ms-transform: rotate(55deg);
-    transform: rotate(55deg);
+    border-width: 0 4px 4px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
 }
 </style>
 <body>
-<div style="width: 250px">
-<h1>CSS Checkboxes</h1>
+<div style="width: 220px">
+<h1>CSS Checkbox</h1>
 <label class="checkbox">One
   <input type="checkbox" checked="checked">
   <span class="checkmark"></span>
