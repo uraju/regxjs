@@ -1,0 +1,9 @@
+/* color for checkbox - box */
+.ui.checkbox.notes input:checked:focus~.box:after, .ui.checkbox.notes input:checked:focus~label:after, .ui.checkbox.notes input:checked~.box:after, .ui.checkbox.notes input:checked~label:after {
+  color: white;
+  background: blue;
+  /* border: lightgrey 1px solid;
+  border-radius: 4px; */
+}
+
+<Checkbox className = "notes" label='This checkbox comes pre-checked with custom css' defaultChecked />
