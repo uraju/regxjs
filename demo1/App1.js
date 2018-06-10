@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Menu, Icon} from 'semantic-ui-react'
 import './App.css';
-import $ from 'jquery';
 
 // .right {
 //   float: right;
@@ -20,28 +19,25 @@ class App extends Component {
   }
   filterItems = () => {
     console.log('filterItems to process ...');
-    console.log(this.state.item);
+    console.log(this.state.item.text);
     this.closeSearch();
   }
   closeSearch = () => {
     this.setState({ item: this.state.hide });
   }
   itemClick = (evt, data) => {
-    // console.log(evt);
-    // console.log(evt.pageX + ', ' + evt.pageY);
-    var _obj = $(evt.target);
+    var _obj = evt.target;
     var _item = {}, _loc={};
+    // console.log(evt);
     // console.log(_obj);
-    //var ht = _obj.outerHeight(true);
-    var loc = _obj.offset();
-    _item.text = _obj.text();
-    _loc.left = loc.left;
-    _loc.top = loc.top + 5;// + ht;
+    _item.text = _obj.innerText;
+    _loc.left = evt.target.offsetLeft;
+    _loc.top = evt.target.offsetTop + 5;
     _loc.position = 'absolute';
     _loc.display = 'block';
     _item.loc = _loc;
     this.setState({ item: _item })
-    //console.log(_item);
+    console.log(_item);
   };
 
   render() {
@@ -56,7 +52,7 @@ class App extends Component {
           <hr />
           <Menu.Menu>
             <Menu.Item onClick={this.filterItems}>
-              <span>{this.state.item.text}</span>
+              <span><strong>{this.state.item.text}</strong></span>
             </Menu.Item>
           </Menu.Menu>
         </Menu.Item>
